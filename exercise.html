@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+</head>
+
+<body>
+  <button onclick="console.log(cartQuantity)" ;>Show Quantity</button>
+  <button onclick="console.log(cartQuantity+=1);" ;>Add to Cart</button>
+  <button onclick="console.log(cartQuantity+=2)" ;>+2</button>
+  <button onclick="console.log(cartQuantity+=3)">+3</button>
+  <button onclick="console.log(cartQuantity+=4)">+4</button>
+  <button onclick="console.log(cartQuantity+=5)">+5</button>
+  <button onclick="console.log(cartQuantity-=1)">-1</button>
+  <button onclick="console.log(cartQuantity-=2)">-2</button>
+  <button onclick="console.log(cartQuantity-=3)">-3</button>
+  <button onclick="console.log(`Cart was Reset`); console.log(cartQuantity=0)" ;>Reset</button><br><br><br>
+
+  <button onclick="console.log(calculation='1');">1</button>
+  <button onclick="console.log(calculation='2');">2</button>
+  <button onclick="console.log(calculation='3');">3</button>
+  <button onclick="console.log(calculation='+');">+</button>
+  <button onclick="console.log(eval(calculation));">=</button>
+
+  <script>
+    let name = 'Isaac';
+    console.log(`my name is ${name}`);
+    let coffee = 3 + 2;
+    let bagel = 2 + 1;
+    let soup = 5 + 4;
+    let mainCost = coffee + bagel + soup;
+    console.log(mainCost);
+    console.log('cost of food $' + mainCost);
+    console.log(`cost of food: $${mainCost}`);
+    let taxCharge = 10 / 100;
+    console.log(taxCharge);
+    let initialCost = 17;
+    console.log(initialCost);
+    initialCost = initialCost * taxCharge;
+    console.log(Math.round(initialCost));
+    let totalCost = 0
+    totalCost = mainCost + Math.round(initialCost);
+    console.log(totalCost);
+
+    true
+    false
+    if (mainCost <= totalCost) {
+      console.log('You are wrong')
+    } else if (taxCharge !== totalCost) {
+      console.log('You are wright')
+    } else if (mainCost !== totalCost) {
+      console.log('You are wright')
+    };
+
+    if (mainCost === 10 + 8) {
+      console.log('false')
+    } else if (mainCost === 10 + 8) {
+      console.log('false')
+    } else if (mainCost === 10 + 7) {
+      console.log('True')
+    };
+
+    document.body.innerHTML = `I went to a restaurant, and I noticed that the cost of a coffee, bagel and soup is $${mainCost}, and there was an increment in price due to the tax and it summed up to be $${Math.round(initialCost)}, after much deliberation on the tax surcharged on the amount of goods I went to the store to purchase, I was finally able to get a total amount worth $${totalCost};`
+    let cartQuantity = 0;
+
+    let calculation = '';
+  </script>
+</body>
+
+</html>
